@@ -1,4 +1,8 @@
 let nombreCliente = prompt('¡Muchísimas gracias por interesarte en mi trabajo como desarrollador! \nPor favor, dime cuál es tu nombre: ')
+while(nombreCliente === ''){
+    alert('Por favor ingresa tu nombre')
+    nombreCliente = prompt('¡Muchísimas gracias por interesarte en mi trabajo como desarrollador! \nPor favor, dime cuál es tu nombre: ')
+}
 alert('¡Un gusto conocerte '+nombreCliente+'!')
 alert('A continuación se te presentarán algunas preguntas. Por favor responde utilizando el número de la opción que desees.')
 let tipoWeb = prompt('Cuéntame, que tipo de página web necesitas cotizar: \n1. Blog \n2. Ecommerce \n3. Landing page')
@@ -167,7 +171,11 @@ while((decisionFinal !== '1') && (decisionFinal !== '2')){
     decisionFinal = prompt('¿Deseas recibir esta cotización por mail? \n1. Sí \n2. No')
 } if(decisionFinal === '1'){
     ingresoCorreo = prompt('Por favor, ingresa tu dirección de correo electrónico')
+    while(ingresoCorreo === ''){
+        alert('Por favor ingresa tu correo electrónico')
+        ingresoCorreo = prompt('Por favor, ingresa tu dirección de correo electrónico')
+    }
     alert('¡Muchas gracias por cotizar conmigo! Tu cotización será enviada a ' +ingresoCorreo)
 } else{
     alert('Muchas gracias por cotizar conmigo ' +nombreCliente)
-} alert('¡Cuídate!')
+} alert('¡Cuídate, ' +nombreCliente+ '!')
